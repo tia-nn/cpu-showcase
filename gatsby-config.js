@@ -5,9 +5,10 @@ const path = require('path')
  */
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `CPU Showcase`,
+    siteUrl: `https://tia-nn.github.io/cpu-showcase`
   },
+  pathPrefix: `/cpu-showcase`,
   plugins: ["gatsby-plugin-postcss"],
 };
 

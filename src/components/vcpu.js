@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Script } from "gatsby"
+import { Script, withPrefix } from "gatsby"
 import { useState } from "react"
 import { OneBitCPU } from "./onebitcpu";
 
@@ -28,7 +28,7 @@ export function VCpu(props) {
 
     return (
         <>
-            <Script src="/main.js" onLoad={() => { window.Module.onRuntimeInitialized = () => setLoaded(true); }}></Script>
+            <Script src={withPrefix("/main.js")} onLoad={() => { window.Module.onRuntimeInitialized = () => setLoaded(true); }}></Script>
             {contents}
         </>
     )
