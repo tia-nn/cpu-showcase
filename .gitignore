@@ -1,0 +1,10 @@
+node_modules/
+.cache/
+public
+
+verilog/*/obj_dir
+verilog/*/main.*
+static/main.js
+static/main.wasm
+
+.vscode

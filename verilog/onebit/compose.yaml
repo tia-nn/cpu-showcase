@@ -1,0 +1,28 @@
+services:
+  verilator:
+    image: verilator/verilator
+    volumes:
+      - type: bind
+        source: .
+        target: /work
+        bind:
+          selinux: z
+    command: --cc ./onebit_cpu.sv
+    security_opt:
+      - label=level:s0
+
+  emsdk:
+    image: emscripten/emsdk
+    volumes:
+      - type: bind
+        source: .
+        target: /src
+        bind:
+          selinux: z
+    command: make -B
+    security_opt:
+      - label=level:s0
+
+    depends_on:
+      verilator:
+        condition: service_completed_successfully

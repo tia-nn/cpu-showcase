@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+/* NOTE: !import を外すにはライブラリに手を加える必要がある */
+iframe.diagrams-iframe {
+    min-height: initial !important;
+    min-width: initial !important;
+}
